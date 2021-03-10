@@ -36,6 +36,11 @@ const Header = ({ siteTitle }) => (
               style={{
                 color: 'white',
                 textDecoration: 'none',
+                ':hover': {color: "red", textDecoration: "underline"},
+                ':visited': {
+                  color: 'purple'
+               }
+                
               }}
             >
               <Text fontSize="24px" margin={2}>

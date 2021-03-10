@@ -30,12 +30,11 @@ const Layout = ({ children }) => {
     <Box
       display="flex"
       flexDirection="column"
-      height="100vh"
       backgroundColor="#14213D"
     >
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Box padding={5} margin="0 auto">
-        <ThemeProvider theme={theme}>
+      <Box padding={5} margin="0 auto"  backgroundColor="#14213D">
+        <ThemeProvider theme={theme} >
           <main>{children}</main>
         </ThemeProvider>
       </Box>
@@ -44,9 +43,12 @@ const Layout = ({ children }) => {
         paddingY={3}
         marginTop="auto"
         as="footer"
+        
         color="#e5e5e5"
+        backgroundColor="#0F192E"
+        align='center'
       >
-        © {new Date().getFullYear()}, Laudair
+        © {new Date().getFullYear()}, Laudair Egevarth
       </Box>
     </Box>
   )

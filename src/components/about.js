@@ -6,7 +6,7 @@ import './layout.css'
 
 const About = () => {
   return (
-    <Box m="42px">
+    <Box m="62px" align='center'>
       <Text as="span" fontSize="18px" fontWeight="bold" color="#FCA311">
         WEB DEVELOPER
       </Text>
