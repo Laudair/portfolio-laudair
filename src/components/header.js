@@ -2,9 +2,14 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Box, Heading, Text, Stack } from '../base-components'
-import { Flex, Spacer } from '@chakra-ui/react'
+import { Flex, Spacer, Image } from '@chakra-ui/react'
 
-const Header = ({ siteTitle }) => (
+import LinkedinLogo from "../images/linkedin-logo.png"
+import GitHubLogo from '../images/github.png'
+
+const Header = ({ siteTitle }) => {
+
+return(
   <Box as="header" backgroundColor="#14213D" marginBottom={3}>
     <Box margin="0 auto" paddingY={3} paddingX={5}>
       <Heading as="h2" margin="0" p="20px">
@@ -16,7 +21,7 @@ const Header = ({ siteTitle }) => (
               textDecoration: 'none',
             }}
           >
-            <Stack direction="row" p="0" spacing="2px">
+            <Stack direction="row" p="0" spacing="2px" >
               <Text color="#FCA311" margin="0">
                 {'<'}
               </Text>
@@ -29,67 +34,23 @@ const Header = ({ siteTitle }) => (
             </Stack>
           </Link>
           <Spacer />
-          <Stack direction="row" spacing="36px">
-            <Link
-              to="/"
-              m={4}
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-                ':hover': {color: "red", textDecoration: "underline"},
-                ':visited': {
-                  color: 'purple'
-               }
-                
-              }}
-            >
-              <Text fontSize="24px" margin={2}>
-                About
-              </Text>
-            </Link>
-            <Link
-              to="/"
-              m={4}
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              <Text fontSize="24px" m={2}>
-                Skills
-              </Text>
-            </Link>
-            <Link
-              to="/"
-              m={4}
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              <Text fontSize="24px" margin={2}>
-                Portfolio
-              </Text>
-            </Link>
-            <Link
-              to="/"
-              m={4}
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              <Text fontSize="24px" margin={2}>
-                Contact
-              </Text>
-            </Link>
+          <Stack direction="row" spacing="36px" >
+          
+          <Link  style={{ color: '#999', textDecoration: 'none'}}href="https://www.linkedin.com/in/laudair-egevarth/" isExternal>
+             <Image boxSize="40px"src={LinkedinLogo} alt="Linkedin Logo"/>
+          </Link>
+         <Link  style={{ color: '#999', textDecoration: 'none'}}href="https://github.com/Laudair" isExternal>
+            <Image boxSize="40px"src={GitHubLogo} alt="GitHub Logo"/>
+          </Link>
+             
           </Stack>
+          
         </Flex>
       </Heading>
     </Box>
   </Box>
 )
-
+        }
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
