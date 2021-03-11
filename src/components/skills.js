@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ReactLogo from "../images/react-logo.png"
 import GatsbyLogo from '../images/gatsby-icon.png'
 import HtmlLogo from '../images/html-logo.png'
@@ -11,7 +12,7 @@ import { Image, SimpleGrid } from "@chakra-ui/react"
 
 const Skills = () => {
   return (
-    <Box m="68px" align="center"  >
+    <Box marginTop="68px" align="center"  >
       <Box as="h3" color="#e5e5e5">SKILLS</Box>
       <SimpleGrid columns={{ sm: 3, md: 5 }} gap={8}>
         <Image boxSize="100px"src={HtmlLogo} alt="Html Logo"/>
