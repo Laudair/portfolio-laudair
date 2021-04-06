@@ -14,7 +14,7 @@ const About = () => {
       <Box as="h1" color="#e5e5e5">
         Hi, I&apos;m Laudair
       </Box>
-      <Box as="p" color="#e5e5e5" w="420px">
+      <Box as="p" color="#e5e5e5" w={{sm:"90%", md:"420px"}}>
         {' '}
         Enthusiastic developer with positive, team-oriented attitude, and
         excellent communication skills looking forward to joining a fast-growing
