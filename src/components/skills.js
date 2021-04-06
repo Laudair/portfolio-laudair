@@ -7,12 +7,13 @@ import CssLogo from '../images/css-logo.png'
 import JsLogo from '../images/js-logo.png'
 
 import { Box} from '../base-components'
-import { Image, SimpleGrid } from "@chakra-ui/react"
+import { Image, SimpleGrid, Stack, Grid } from "@chakra-ui/react"
 
 
 const Skills = () => {
   return (
     <Box marginTop="68px" align="center"  >
+      
       <Box as="h3" color="#e5e5e5">SKILLS</Box>
       <SimpleGrid columns={{ sm: 3, md: 5 }} gap={8}>
         <Image boxSize="100px"src={HtmlLogo} alt="Html Logo"/>
