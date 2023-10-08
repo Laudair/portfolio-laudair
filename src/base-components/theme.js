@@ -1,7 +1,7 @@
-import { theme } from '@chakra-ui/react'
+import { theme } from "@chakra-ui/react";
 
 const customTheme = {
   ...theme,
-}
+};
 
-export default customTheme
+export default customTheme;

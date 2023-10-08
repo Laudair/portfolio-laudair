@@ -5,15 +5,15 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react'
-import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
-import { ThemeProvider } from '@chakra-ui/react'
-import theme from '../base-components/theme'
-import { Box } from '../base-components'
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import { ThemeProvider } from "@chakra-ui/react";
+import theme from "../base-components/theme";
+import { Box } from "../base-components";
 
-import Header from './header'
-import './layout.css'
+import Header from "./header";
+import "./layout.css";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,17 +24,13 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
-    <Box
-      display="flex"
-      flexDirection="column"
-      backgroundColor="#14213D"
-    >
+    <Box display="flex" flexDirection="column" backgroundColor="#14213D">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Box padding={5} margin="0 auto"  backgroundColor="#14213D">
-        <ThemeProvider theme={theme} >
+      <Box padding={5} margin="0 auto" backgroundColor="#14213D">
+        <ThemeProvider theme={theme}>
           <main>{children}</main>
         </ThemeProvider>
       </Box>
@@ -43,19 +39,18 @@ const Layout = ({ children }) => {
         paddingY={3}
         marginTop="auto"
         as="footer"
-        
         color="#e5e5e5"
         backgroundColor="#0F192E"
-        align='center'
+        align="center"
       >
         © {new Date().getFullYear()}, Laudair Egevarth
       </Box>
     </Box>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
